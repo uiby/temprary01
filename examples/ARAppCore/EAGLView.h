@@ -64,6 +64,7 @@ typedef enum {
 
 @class EAGLView;
 @protocol EAGLViewTookSnapshotDelegate <NSObject>
+@required
 - (void) tookSnapshot:(UIImage *)image forView:(EAGLView *)view;
 @end
 

@@ -1040,7 +1040,8 @@ int            arGetMarkerNum( ARHandle *arHandle );
     @seealso arDetectMarker arDetectMarker
  */
 ARMarkerInfo  *arGetMarker( ARHandle *arHandle );
-
+ARMarkerInfo  *arGetThisMarker( ARHandle *arHandle, int num);
+    
 /* ------------------------------ */
 
 int            arLabeling( ARUint8 *image, int xsize, int ysize, int pixelFormat,

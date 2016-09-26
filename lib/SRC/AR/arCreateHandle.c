@@ -453,3 +453,12 @@ ARMarkerInfo *arGetMarker( ARHandle *handle )
 
     return &(handle->markerInfo[0]);
 }
+
+ARMarkerInfo *arGetThisMarker( ARHandle *handle, int num) {
+    if( handle == NULL ) return NULL;
+    
+    if( handle->marker_num <= 0 ) return NULL;
+    
+    return &(handle->markerInfo[num]);
+
+}

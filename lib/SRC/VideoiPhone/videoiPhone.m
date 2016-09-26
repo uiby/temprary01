@@ -713,6 +713,10 @@ id ar2VideoGetNativeVideoInstanceiPhone(AR2VideoParamiPhoneT *vid)
     if (vid->itsAMovie) return (vid->movieVideo);
     else return (vid->cameraVideo);
 }
+int hasAr2VideoGetNativeVideoInstanceiPhone(AR2VideoParamiPhoneT *vid) {
+    if (!vid) return 0;
+    return 1;
+}
 
 // A class that implements the CameraVideoTookPictureDelegate protocol.
 @implementation videoiPhoneCameraVideoTookPictureDelegate

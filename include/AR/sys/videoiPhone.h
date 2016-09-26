@@ -43,7 +43,6 @@
 
 // This header is only ever included by other headers, so
 // doesn't need to include <AR/ar.h> or <AR/video.h>.
-
 #ifdef  __cplusplus
 extern "C" {
 #endif
@@ -140,6 +139,7 @@ AR2VideoParamiPhoneT  *ar2VideoOpenAsynciPhone      (const char *config, void (*
 // object instance.
 #ifdef __OBJC__
 id ar2VideoGetNativeVideoInstanceiPhone(AR2VideoParamiPhoneT *vid);
+int hasAr2VideoGetNativeVideoInstanceiPhone(AR2VideoParamiPhoneT *vid);
 #endif
 
 #ifdef  __cplusplus

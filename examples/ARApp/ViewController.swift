@@ -11,7 +11,7 @@ import AudioToolbox
 import QuartzCore.QuartzCore
 //import "ARView.h"
 //@class ARView
-class ViewController: UIViewController {
+class ARViewController: UIViewController, UIAlertViewDelegate, CameraVideoTookPictureDelegate, EAGLViewTookSnapshotDelegate{//{
     let VIEW_SCALEFACTOR: Float = 1.0
     let VIEW_DISTANCE_MIN: Float = 5.0
     let VIEW_DISTANCE_MAX: Float = 2000.0
@@ -33,14 +33,14 @@ class ViewController: UIViewController {
     //Tansformation matrix retrieval
     internal var gAR3DHandle: UnsafeMutablePointer<AR3DHandle> = nil
     internal var gPatt_width: ARdouble = 0.0
-    internal var gPatt_trans = [[ARdouble]]()//() ARdouble = 0.0 //= [3, 4] ToDo 配列にする
+    internal var gPatt_trans = [(ARdouble, ARdouble, ARdouble, ARdouble)](count: 3, repeatedValue: (0, 0, 0, 0))
     internal var gPatt_found: Int32 = 0
     internal var gPatt_id: Int32 = 0
     internal var useContPoseEstimation: Bool = false
     
     //Drawing
     internal var gCparamLT: UnsafeMutablePointer<ARParamLT> = nil
-    internal var glView: UnsafeMutablePointer<ARView> = nil
+    var glView: UnsafeMutablePointer<ARView> = nil
     internal var arglContextSettings: ARGL_CONTEXT_SETTINGS_REF?
     
     override func loadView() {
@@ -138,17 +138,22 @@ class ViewController: UIViewController {
             #endif
         }
     }
-    
-    //startCallback(userDate)
-    
-    static func startCallback(userData: Void) {
-        let vc: ViewController = ViewController(userData)
+
+    var startCallback: @convention(c)(UnsafeMutablePointer<Void>) -> Void = {_ in
+        let vc: ARViewController
+            vc.viewDidLoad()//(userData)
         vc.start2()
     }
     
+    /*static func startCallback(userData: Void) {
+        let vc: ARViewController = ARViewController(userData)
+        vc.start2()
+    }*/
+    
     @IBAction func start() {
         var vconf: String = ""
-        if (!(gVid = ar2VideoOpenAsync(vconf, startCallBack, self))) {
+        if (!(gVid = ar2VideoOpenAsync(vconf, startCallback, self))) {
+            //ar2VideoOpenAsync(<#T##config: UnsafePointer<Int8>##UnsafePointer<Int8>#>, <#T##callback: ((UnsafeMutablePointer<Void>) -> Void)!##((UnsafeMutablePointer<Void>) -> Void)!##(UnsafeMutablePointer<Void>) -> Void#>, <#T##userdata: UnsafeMutablePointer<Void>##UnsafeMutablePointer<Void>#>)
             print("Error: Unable to open connection to camera.");
             self.stop()
             return
@@ -197,7 +202,7 @@ class ViewController: UIViewController {
         if (ar2VideoGetCParam(gVid, &cparam!) < 0) {
             var cparam_name: String = "Data2/camera_para.dat"
             print("Unable to automatically determine camera parameters. Using default.\n");
-            if (arParamLoad(cparam_name, 1, &cparam!) < 0) {
+            if (arParamLoadFromBuffer(cparam_name, 1, &cparam!) < 0) {
                 print("Error: Unable to load parameter file %s for camera.\n", cparam_name);
                 self.stop()
                 return
@@ -244,8 +249,6 @@ class ViewController: UIViewController {
         // libARvideo on iPhone uses an underlying class called CameraVideo. Here, we
         // access the instance of this class to get/set some special types of information.
         let iPhone = gVid.memory.device.iPhone
-        
-        //var cameraVideo: UnsafePointer<AnyObject> = ar2VideoGetNativeVideoInstanceiPhone(iPhone)
         var cameraVideo = ar2VideoGetNativeVideoInstanceiPhone(iPhone)
         if (cameraVideo == nil) {
             print("Error: Unable to set up AR camera: missing CameraVideo instance.\n");
@@ -254,8 +257,10 @@ class ViewController: UIViewController {
         }
 
         // The camera will be started by -startRunLoop.
-        cameraVideo.tookPictureDelegate = self
-        cameraVideo.tookPictureDelegateUserData = nil
+        // FIXME Movie Video の場合
+        var camera : CameraVideo? = cameraVideo as? CameraVideo
+        camera!.tookPictureDelegate = self
+        camera!.tookPictureDelegateUserData = nil
         
         //Other ARToolKit setup
         arSetMarkerExtractionMode(gARHandle, AR_USE_TRACKING_HISTORY_V2)
@@ -408,26 +413,33 @@ class ViewController: UIViewController {
             
             if (k != -1) {
 #if DEBUG
+    
                 print("marker %d matched pattern %d.\n", k, gPatt_id);
 #endif
                 // Get the transformation between the marker and the real camera into gPatt_trans.
+                //var arrayPointer: UnsafeMutablePointer<(ARdouble, ARdouble, ARdouble, ARdouble)> = &gPatt_trans[0]
                 if (gPatt_found > 0 && useContPoseEstimation) {
-                    err = arGetTransMatSquareCont(gAR3DHandle, &(gARHandle.memory.markerInfo[k]), gPatt_trans, gPatt_width, gPatt_trans);
+                    err = arGetTransMatSquareCont(gAR3DHandle, arGetThisMarker(gARHandle, k), &gPatt_trans, gPatt_width, &gPatt_trans);
                 } else {
-                    err = arGetTransMatSquare(gAR3DHandle, &(gARHandle.memory.markerInfo[k]), gPatt_width, gPatt_trans);
+                    err = arGetTransMatSquare(gAR3DHandle, arGetThisMarker(gARHandle, k), gPatt_width, &gPatt_trans);
                 }
                 var modelview = [Float](count: 16,repeatedValue: 0.0) // We have a new pose, so set that.
 #if ARDOUBLE_IS_FLOAT
                 arglCameraViewRHf(gPatt_trans, modelview, VIEW_SCALEFACTOR);
 #else
-                var patt_transf = [[Float]](count: 3, repeatedValue: [Float](count: 4, repeatedValue: 0))
+                var patt_transf = [(Float, Float, Float, Float)](count: 3, repeatedValue: (0, 0, 0, 0))
                 for i in 0..<3 {
                     for j in 0..<4 {
-                        patt_transf[i][j] = Float(gPatt_trans[i][j])
+                        switch (j) {
+                        case 0:  patt_transf[i].0 = Float(gPatt_trans[i].0)
+                        case 1:  patt_transf[i].1 = Float(gPatt_trans[i].1)
+                        case 2:  patt_transf[i].2 = Float(gPatt_trans[i].2)
+                        case 3:  patt_transf[i].3 = Float(gPatt_trans[i].3)
+                        }
                     }
                 }
-                arglCameraViewRHf(&patt_transf, modelview, VIEW_SCALEFACTOR)
-
+                arglCameraViewRHf(&patt_transf, &modelview, VIEW_SCALEFACTOR)
+    
 #endif
                 gPatt_found = 1 //true
                 glView.memory.cameraPose = modelview
@@ -438,9 +450,10 @@ class ViewController: UIViewController {
             
             // Get current time (units = seconds).
             var runLoopTimeNow: NSTimeInterval
-            runLoopTimeNow = CFAbsoluteTimeGetCurrent();
+            runLoopTimeNow = CFAbsoluteTimeGetCurrent()
             glView.memory.updateWithTimeDelta(runLoopTimeNow - runLoopTimePrevious)
-
+            
+            
             // The display has changed.
             glView.memory.drawView(self)
             
@@ -448,11 +461,6 @@ class ViewController: UIViewController {
             runLoopTimePrevious = runLoopTimeNow;
         }
     }
-    //private func ar2VideoGetNativeVideoInstanceiPhone(vid : _AR2VideoParamiPhoneT) -> CameraVideo? {
-      /*if (!vid) return (nil);
-      if (vid->itsAMovie) return (vid->movieVideo);
-      else return (vid->cameraVideo);*/
-    //}
     
     func stop () {
         self.stopRunLoop()
@@ -515,18 +523,18 @@ class ViewController: UIViewController {
     // Once the image is ready, tookSnapshot:forview: will be called.
     func takeSnapshot() {
     // We will need to wait for OpenGL rendering to complete.
-    glView.memory.tookSnapshotDelegate = self
-    glView.memory.takeSnapshot()
+        glView.memory.tookSnapshotDelegate = self
+        glView.memory.takeSnapshot()
     }
     
     // Here you can choose what to do with the image.
     // We will save it to the iOS camera roll.
-    func tookSnapshot(snapshot: UnsafePointer<UIImage>, forView view: UnsafePointer<EAGLView>) {
+    func tookSnapshot(image: UnsafePointer<UIImage>, forView view: UnsafePointer<EAGLView>) {
     // First though, unset ourselves as delegate.
         glView.memory.tookSnapshotDelegate = nil
     
     // Write image to camera roll.
-        UIImageWriteToSavedPhotosAlbum(snapshot.memory, self, #selector(ViewController.image(_:didFinishSavingWithError:error:)), nil);
+        UIImageWriteToSavedPhotosAlbum(image.memory, self, #selector(ARViewController.image(_:didFinishSavingWithError:error:)), nil);
     }
     
     // Let the user know that the image was saved by playing a shutter sound,
@@ -542,11 +550,10 @@ class ViewController: UIViewController {
             var messageString: NSString = error.memory.localizedDescription
             var moreString: NSString = (error.memory.localizedFailureReason != nil) ? error.memory.localizedFailureReason! : NSLocalizedString("Please try again.", comment: "")
             messageString = NSString.localizedStringWithFormat((messageString as String) + ". " + (moreString as String))
-            var alertView : UnsafePointer<UIAlertView> = UIAlertView.init(title: titleString as String, message: messageString as String, delegate: self, cancelButtonTitle: "OK", otherButtonTitles: nil)
-            alertView.memory.show()
+            var alertView : UIAlertView = UIAlertView.init(title: titleString as String, message: messageString as String, delegate: self, cancelButtonTitle: "OK")
+            alertView.show()
         }
     }
-    
 }
 
 

@@ -75,7 +75,7 @@
 /* Begin PBXBuildFile section */
 		38E11E231D90D305005A48AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90191A771D88F3E300718D0D /* ViewController.swift */; };
 		38E11E241D90D30B005A48AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90191A761D88F3E300718D0D /* AppDelegate.swift */; };
-		38E11E271D90D562005A48AD /* ARToolKit5iOS complete-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E11E261D90D561005A48AD /* ARToolKit5iOS complete-Bridging-Header.h */; };
+		38E773811D989E22003F6218 /* ARToolKit5iOScomplete-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E773801D989E22003F6218 /* ARToolKit5iOScomplete-Bridging-Header.h */; };
 		4A089BC8133C93DE00974D65 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACEFC2F130AEC6C009D1DA0 /* libfreetype.a */; };
 		4A089BC9133C93DE00974D65 /* libOpenThreads.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACEFC31130AEC6C009D1DA0 /* libOpenThreads.a */; };
 		4A089BCA133C93DE00974D65 /* libosg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACEFC32130AEC6C009D1DA0 /* libosg.a */; };
@@ -1613,7 +1613,7 @@
 
 /* Begin PBXFileReference section */
 		38CB89041D94BBF6000172C0 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		38E11E261D90D561005A48AD /* ARToolKit5iOS complete-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ARToolKit5iOS complete-Bridging-Header.h"; path = "examples/ARApp/ARToolKit5iOS complete-Bridging-Header.h"; sourceTree = "<group>"; };
+		38E773801D989E22003F6218 /* ARToolKit5iOScomplete-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ARToolKit5iOScomplete-Bridging-Header.h"; sourceTree = "<group>"; };
 		4A0619B213D59DF10066826B /* ARAppMovie-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ARAppMovie-Info.plist"; sourceTree = "<group>"; };
 		4A0619B313D59DF10066826B /* ARAppMovie_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ARAppMovie_Prefix.pch; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4A0619B413D59DF10066826B /* ARAppMovieDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ARAppMovieDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -3300,7 +3300,7 @@
 		78BB3E7408E482F400D7CA2D /* video.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = video.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
 		78BB3E7608E482F400D7CA2D /* video2.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = video2.c; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
 		78BB3E7908E482F400D7CA2D /* videoDummy.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = videoDummy.c; sourceTree = "<group>"; };
-		78BB3F1108E4837000D7CA2D /* ar.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ar.h; sourceTree = "<group>"; };
+		78BB3F1108E4837000D7CA2D /* ar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ar.h; sourceTree = "<group>"; };
 		78BB3F1208E4837000D7CA2D /* arConfig.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = arConfig.h; sourceTree = "<group>"; };
 		78BB3F1308E4837000D7CA2D /* arMulti.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = arMulti.h; sourceTree = "<group>"; };
 		78BB3F1408E4837000D7CA2D /* config.h.in */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; path = config.h.in; sourceTree = "<group>"; };
@@ -6422,7 +6422,7 @@
 			isa = PBXGroup;
 			children = (
 				38CB89041D94BBF6000172C0 /* PrefixHeader.pch */,
-				38E11E261D90D561005A48AD /* ARToolKit5iOS complete-Bridging-Header.h */,
+				38E773801D989E22003F6218 /* ARToolKit5iOScomplete-Bridging-Header.h */,
 				4A752F68116238DD009877B3 /* README (ARToolKit for iOS).txt */,
 				4AE6FE7F0BC24FFC0084390C /* ChangeLog.txt */,
 				4AF9714D1B5F58A6001BFEB5 /* LICENSE.txt */,
@@ -6655,7 +6655,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38E11E271D90D562005A48AD /* ARToolKit5iOS complete-Bridging-Header.h in Headers */,
+				38E773811D989E22003F6218 /* ARToolKit5iOScomplete-Bridging-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -8767,7 +8767,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "fujixl-lab-j13-icloud.com.ARApp";
 				PRODUCT_NAME = ARApp;
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Downloads/ARToolKitWithSwift-master/examples/ARApp/ARToolKit5iOS complete-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Documents/ARToolKitWithSwift/temprary01/ARToolKit5iOScomplete-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -8783,7 +8783,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "fujixl-lab-j13-icloud.com.ARApp";
 				PRODUCT_NAME = ARApp;
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Downloads/ARToolKitWithSwift-master/examples/ARApp/ARToolKit5iOS complete-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Documents/ARToolKitWithSwift/temprary01/ARToolKit5iOScomplete-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -8800,7 +8800,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "fujixl-lab-j13-icloud.com.ARApp";
 				PRODUCT_NAME = ARApp;
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Downloads/ARToolKitWithSwift-master/examples/ARApp/ARToolKit5iOS complete-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Documents/ARToolKitWithSwift/temprary01/ARToolKit5iOScomplete-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -9199,6 +9199,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Documents/ARToolKitWithSwift/temprary01/ARToolKit5iOScomplete-Bridging-Header.h";
 			};
 			name = Distribution;
 		};
@@ -9208,7 +9209,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "ARToolKit5iOS complete";
-				SWIFT_OBJC_BRIDGING_HEADER = "examples/ARApp/ARToolKit5iOS complete-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Documents/ARToolKitWithSwift/temprary01/examples/ARApp/ARToolKit5iOS complete-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Distribution;
@@ -9359,8 +9360,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "ARToolKit5iOS complete";
-				SWIFT_OBJC_BRIDGING_HEADER = "examples/ARApp/ARToolKit5iOS complete-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Documents/ARToolKitWithSwift/temprary01/examples/ARApp/ARToolKit5iOS complete-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				"SWIFT_OPTIMIZATION_LEVEL[arch=*]" = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -9371,7 +9373,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "ARToolKit5iOS complete";
-				SWIFT_OBJC_BRIDGING_HEADER = "examples/ARApp/ARToolKit5iOS complete-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Documents/ARToolKitWithSwift/temprary01/examples/ARApp/ARToolKit5iOS complete-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -9637,6 +9639,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Documents/ARToolKitWithSwift/temprary01/ARToolKit5iOScomplete-Bridging-Header.h";
 				WARNING_CFLAGS = "-Wall";
 			};
 			name = Debug;
@@ -9677,6 +9680,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Documents/ARToolKitWithSwift/temprary01/ARToolKit5iOScomplete-Bridging-Header.h";
 			};
 			name = Release;
 		};
