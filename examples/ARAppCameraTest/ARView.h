@@ -108,6 +108,7 @@ typedef enum {
 @property float *cameraPose;
 @property(readonly) GLint *viewPort;
 - (void) updateWithTimeDelta:(NSTimeInterval)timeDelta;
+- (void) setCameraPose:(float *)cameraPose;
 - (void) drawView:(id)sender;
 
 // Points to the parent view controller.
@@ -127,5 +128,4 @@ typedef enum {
 
 // Interaction.
 @property(nonatomic, assign) id <ARViewTouchDelegate> touchDelegate;
-
 @end

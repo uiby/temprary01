@@ -442,6 +442,7 @@ AR_DLL_API ARVideoSourceInfoListT *ar2VideoCreateSourceInfoList(const char *conf
 AR_DLL_API void              ar2VideoDeleteSourceInfoList(ARVideoSourceInfoListT **p);
 AR_DLL_API AR2VideoParamT   *ar2VideoOpen            (const char *config);
 AR_DLL_API AR2VideoParamT   *ar2VideoOpenAsync       (const char *config, void (*callback)(void *), void *userdata);
+AR_DLL_API AR2VideoParamT   *ar2VideoOpenAsync2       (const char *config, void (*callback)(void), void *userdata);
 AR_DLL_API int               ar2VideoClose           (AR2VideoParamT *vid);
 AR_DLL_API int               ar2VideoDispOption      (AR2VideoParamT *vid);
 AR_DLL_API int               ar2VideoGetDevice       (AR2VideoParamT *vid);

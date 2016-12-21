@@ -330,6 +330,12 @@
 {
 	// Override in subclass.
 }
+- (void) sertCameraPose:(float *) cameraPose {
+    
+}
+- (void) updateWithTimeDelta:(NSTimeInterval)timeDelta {
+    
+}
 
 - (void) swapBuffers
 {

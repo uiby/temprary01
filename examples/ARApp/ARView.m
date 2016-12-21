@@ -308,10 +308,10 @@ enum {
     glEnableVertexAttribArray(ATTRIBUTE_COLOUR);
 
 #ifdef DEBUG
-	if (!arglGLValidateProgram(program)) {
+	/*if (!arglGLValidateProgram(program)) {
 		ARLOGe("[ARView drawView:] Error: shader program %d validation failed.\n", program);
 		return;
-	}
+	}*/
 #endif
     
     for (i = 0; i < 6; i++) {

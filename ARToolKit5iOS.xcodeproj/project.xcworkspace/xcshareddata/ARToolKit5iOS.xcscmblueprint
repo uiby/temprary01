@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F95985A4E4B63C88B594BDA84C0C55E5DF9C12A8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E0C5AD49F369C57709743FCF2A67DBD974775394" : 9223372036854775807,
+    "F95985A4E4B63C88B594BDA84C0C55E5DF9C12A8" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6CBDA859-F220-400E-8AE6-7F1405CC7DB9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E0C5AD49F369C57709743FCF2A67DBD974775394" : "..\/ARToolKit_by_FujisawaLab",
+    "F95985A4E4B63C88B594BDA84C0C55E5DF9C12A8" : "temprary01%20%E3%81%AE%E3%82%B3%E3%83%92%E3%82%9A%E3%83%BC\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ARToolKit5iOS",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ARToolKit5iOS.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/uiby\/ARToolKit_by_FujisawaLab.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E0C5AD49F369C57709743FCF2A67DBD974775394"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/uiby\/temprary01.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F95985A4E4B63C88B594BDA84C0C55E5DF9C12A8"
+    }
+  ]
+}

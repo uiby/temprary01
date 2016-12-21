@@ -73,7 +73,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		38E11E231D90D305005A48AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90191A771D88F3E300718D0D /* ViewController.swift */; };
+		387EDE901DDB52EC001981A5 /* ARPointerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 387EDE8F1DDB52EC001981A5 /* ARPointerBridge.m */; };
+		387EDE911DDB52EC001981A5 /* ARPointerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 387EDE8F1DDB52EC001981A5 /* ARPointerBridge.m */; };
+		387FF50E1DC97A86002D6834 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC2E636118ED63E00CC4F55 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		38E11E231D90D305005A48AD /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90191A771D88F3E300718D0D /* ARViewController.swift */; };
 		38E11E241D90D30B005A48AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90191A761D88F3E300718D0D /* AppDelegate.swift */; };
 		38E773811D989E22003F6218 /* ARToolKit5iOScomplete-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E773801D989E22003F6218 /* ARToolKit5iOScomplete-Bridging-Header.h */; };
 		4A089BC8133C93DE00974D65 /* libfreetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACEFC2F130AEC6C009D1DA0 /* libfreetype.a */; };
@@ -289,11 +292,11 @@
 		4A3D42D0130D1FF500E64C33 /* Iris.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ACEFEF4130AF497009D1DA0 /* Iris.png */; };
 		4A3D42D1130D1FF500E64C33 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ACEFEF6130AF497009D1DA0 /* MainWindow.xib */; };
 		4A47F753116E092C00FC577E /* ARView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A47F752116E092C00FC577E /* ARView.m */; };
-		4A47F816116E638800FC577E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1822E10DC97C2700B73A53 /* Foundation.framework */; };
-		4A47F817116E638800FC577E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1822E50DC97C2700B73A53 /* UIKit.framework */; };
-		4A47F828116E638B00FC577E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1822D30DC96E3B00B73A53 /* OpenGLES.framework */; };
-		4A47F9D3116E63FB00FC577E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1822E30DC97C2700B73A53 /* QuartzCore.framework */; };
-		4A47F9DC116E641C00FC577E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1822E70DC97C3800B73A53 /* CoreGraphics.framework */; };
+		4A47F816116E638800FC577E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1822E10DC97C2700B73A53 /* Foundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4A47F817116E638800FC577E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1822E50DC97C2700B73A53 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4A47F828116E638B00FC577E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1822D30DC96E3B00B73A53 /* OpenGLES.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4A47F9D3116E63FB00FC577E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1822E30DC97C2700B73A53 /* QuartzCore.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4A47F9DC116E641C00FC577E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1822E70DC97C3800B73A53 /* CoreGraphics.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4A4BAA8E1B745B210012B77D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA8B555161AD5A200B48D70 /* Default-568h@2x.png */; };
 		4A4BAA8F1B745B210012B77D /* Default-LandscapeLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA8B556161AD5A200B48D70 /* Default-LandscapeLeft.png */; };
 		4A4BAA901B745B210012B77D /* Default-LandscapeLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA8B557161AD5A200B48D70 /* Default-LandscapeLeft@2x.png */; };
@@ -375,7 +378,7 @@
 		4A741550123C1CEC00F9D05A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A2F73111178414800F35FA7 /* MainWindow.xib */; };
 		4A741551123C1CEC00F9D05A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A2F73121178414800F35FA7 /* Icon.png */; };
 		4A741552123C1CEC00F9D05A /* Data2 in Resources */ = {isa = PBXBuildFile; fileRef = 4A2F73A81178456800F35FA7 /* Data2 */; };
-		4A8393B6152163C000D8FE60 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8393B5152163C000D8FE60 /* Accelerate.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		4A8393B6152163C000D8FE60 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8393B5152163C000D8FE60 /* Accelerate.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4A8393B7152165C200D8FE60 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8393B5152163C000D8FE60 /* Accelerate.framework */; };
 		4A8393B8152165C300D8FE60 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8393B5152163C000D8FE60 /* Accelerate.framework */; };
 		4A8393B9152165C500D8FE60 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8393B5152163C000D8FE60 /* Accelerate.framework */; };
@@ -577,14 +580,14 @@
 		4A941D1E1AE5DC9E000FA802 /* profile.c in Sources */ = {isa = PBXBuildFile; fileRef = 4A941CED1AE5DC25000FA802 /* profile.c */; };
 		4A941D1F1AE5DC9E000FA802 /* thread_sub.c in Sources */ = {isa = PBXBuildFile; fileRef = 4A941CEE1AE5DC25000FA802 /* thread_sub.c */; };
 		4A941D201AE5DCDF000FA802 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEB26291804A42A002290C5 /* libAR.a */; };
-		4A941D211AE5DCDF000FA802 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEB26291804A42A002290C5 /* libAR.a */; };
+		4A941D211AE5DCDF000FA802 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEB26291804A42A002290C5 /* libAR.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4A941D221AE5DCDF000FA802 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEB26291804A42A002290C5 /* libAR.a */; };
 		4A941D231AE5DCE0000FA802 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEB26291804A42A002290C5 /* libAR.a */; };
 		4A941D241AE5DCE0000FA802 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEB26291804A42A002290C5 /* libAR.a */; };
 		4A941D251AE5DCE1000FA802 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEB26291804A42A002290C5 /* libAR.a */; };
 		4A941D261AE5DCE1000FA802 /* libAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AEB26291804A42A002290C5 /* libAR.a */; };
 		4A941D271AE5DCE5000FA802 /* libARICP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8689FD1AE5D83A00AFC5F7 /* libARICP.a */; };
-		4A941D281AE5DCE5000FA802 /* libARICP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8689FD1AE5D83A00AFC5F7 /* libARICP.a */; };
+		4A941D281AE5DCE5000FA802 /* libARICP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8689FD1AE5D83A00AFC5F7 /* libARICP.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4A941D291AE5DCE6000FA802 /* libARICP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8689FD1AE5D83A00AFC5F7 /* libARICP.a */; };
 		4A941D2A1AE5DCE6000FA802 /* libARICP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8689FD1AE5D83A00AFC5F7 /* libARICP.a */; };
 		4A941D2B1AE5DCE7000FA802 /* libARICP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8689FD1AE5D83A00AFC5F7 /* libARICP.a */; };
@@ -597,7 +600,7 @@
 		4A941D321AE5DCF2000FA802 /* libARUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A941BD91AE5D8DC000FA802 /* libARUtil.a */; };
 		4A941D331AE5DCF2000FA802 /* libARUtil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A941BD91AE5D8DC000FA802 /* libARUtil.a */; };
 		4A941D341AE5DCF5000FA802 /* libARvideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A941C5E1AE5D923000FA802 /* libARvideo.a */; };
-		4A941D351AE5DCF6000FA802 /* libARvideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A941C5E1AE5D923000FA802 /* libARvideo.a */; };
+		4A941D351AE5DCF6000FA802 /* libARvideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A941C5E1AE5D923000FA802 /* libARvideo.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4A941D361AE5DCF6000FA802 /* libARvideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A941C5E1AE5D923000FA802 /* libARvideo.a */; };
 		4A941D371AE5DCF7000FA802 /* libARvideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A941C5E1AE5D923000FA802 /* libARvideo.a */; };
 		4A941D381AE5DCF7000FA802 /* libARvideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A941C5E1AE5D923000FA802 /* libARvideo.a */; };
@@ -699,9 +702,8 @@
 		4AA8B5EB161AEE1500B48D70 /* Iris-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA8B5E7161AEE1500B48D70 /* Iris-iPad.png */; };
 		4AA8B5EC161AEE1500B48D70 /* Iris-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA8B5E8161AEE1500B48D70 /* Iris-iPad@2x.png */; };
 		4AA8B5ED161AEE1500B48D70 /* Iris@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA8B5E9161AEE1500B48D70 /* Iris@2x.png */; };
-		4AC2E637118ED63E00CC4F55 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC2E636118ED63E00CC4F55 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		4AC2E639118ED63E00CC4F55 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC2E638118ED63E00CC4F55 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		4AC2E675118ED68C00CC4F55 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC2E674118ED68C00CC4F55 /* CoreVideo.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		4AC2E639118ED63E00CC4F55 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC2E638118ED63E00CC4F55 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4AC2E675118ED68C00CC4F55 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC2E674118ED68C00CC4F55 /* CoreVideo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4AC36B9A113E66E400C86F19 /* EdenSurfaces.c in Sources */ = {isa = PBXBuildFile; fileRef = 4AC36B5E113E653700C86F19 /* EdenSurfaces.c */; };
 		4AC36B9B113E66E400C86F19 /* EdenUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = 4AC36B5F113E653700C86F19 /* EdenUtil.c */; };
 		4AC36B9C113E66E400C86F19 /* glm.c in Sources */ = {isa = PBXBuildFile; fileRef = 4AC36B60113E653700C86F19 /* glm.c */; };
@@ -709,7 +711,7 @@
 		4AC3715F113EBF3800C86F19 /* EdenMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 4AC3715E113EBF3800C86F19 /* EdenMath.c */; };
 		4AC5D39B17D96074000944F7 /* gsub_mtx.c in Sources */ = {isa = PBXBuildFile; fileRef = 4A6C5E541794F59F00061A08 /* gsub_mtx.c */; };
 		4ACE00B1130B3F54009D1DA0 /* arosg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE00B0130B3F54009D1DA0 /* arosg.cpp */; };
-		4ACEFC47130AEC7E009D1DA0 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACEFC30130AEC6C009D1DA0 /* libjpeg.a */; };
+		4ACEFC47130AEC7E009D1DA0 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACEFC30130AEC6C009D1DA0 /* libjpeg.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4ACEFC48130AEC9A009D1DA0 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACEFC30130AEC6C009D1DA0 /* libjpeg.a */; };
 		4AD1D4C9133D34BA00941170 /* Data2 in Resources */ = {isa = PBXBuildFile; fileRef = 4AD1D4B6133D34BA00941170 /* Data2 */; };
 		4AEAEBD317A744AA00F61E33 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8393B5152163C000D8FE60 /* Accelerate.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -902,14 +904,14 @@
 		4AF6EFA413DCF78700F77FB0 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AF6EF9E13DCF78700F77FB0 /* Icon-Small@2x.png */; };
 		4AF6EFA513DCF78700F77FB0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AF6EF9F13DCF78700F77FB0 /* Icon.png */; };
 		4AF6EFA613DCF78700F77FB0 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AF6EFA013DCF78700F77FB0 /* Icon@2x.png */; };
-		4AF6F06613DD27C600F77FB0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5BAA8F13D82DFD00C8D5E7 /* AudioToolbox.framework */; };
+		4AF6F06613DD27C600F77FB0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5BAA8F13D82DFD00C8D5E7 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4AF6F06713DD27C700F77FB0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5BAA8F13D82DFD00C8D5E7 /* AudioToolbox.framework */; };
 		4AF6F06813DD27C700F77FB0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5BAA8F13D82DFD00C8D5E7 /* AudioToolbox.framework */; };
 		4AF79D890A26A3F700E900EC /* arMultiReadConfigFile.c in Sources */ = {isa = PBXBuildFile; fileRef = 78BB3E6108E482F400D7CA2D /* arMultiReadConfigFile.c */; };
 		4AF79D8A0A26A3F700E900EC /* arMultiFreeConfig.c in Sources */ = {isa = PBXBuildFile; fileRef = 78BB3E5E08E482F400D7CA2D /* arMultiFreeConfig.c */; };
 		4AF79D8B0A26A3FA00E900EC /* arMultiGetTransMat.c in Sources */ = {isa = PBXBuildFile; fileRef = 78BB3E5F08E482F400D7CA2D /* arMultiGetTransMat.c */; };
 		4AF79D8C0A26A3FB00E900EC /* arMultiGetTransMatStereo.c in Sources */ = {isa = PBXBuildFile; fileRef = 78BB3E6008E482F400D7CA2D /* arMultiGetTransMatStereo.c */; };
-		4AF7B0EF17A123440033FB21 /* libARgsub_es2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6C5E501794F4E700061A08 /* libARgsub_es2.a */; };
+		4AF7B0EF17A123440033FB21 /* libARgsub_es2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6C5E501794F4E700061A08 /* libARgsub_es2.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4AF96F3E1B5F5385001BFEB5 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AF96F3C1B5F5374001BFEB5 /* libc++.dylib */; };
 		4AF96F3F1B5F5386001BFEB5 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AF96F3C1B5F5374001BFEB5 /* libc++.dylib */; };
 		4AF971201B5F5709001BFEB5 /* DoG_scale_invariant_detector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AF96F421B5F5707001BFEB5 /* DoG_scale_invariant_detector.cpp */; };
@@ -1612,6 +1614,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		387EDE8E1DDB52EC001981A5 /* ARPointerBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARPointerBridge.h; sourceTree = "<group>"; };
+		387EDE8F1DDB52EC001981A5 /* ARPointerBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARPointerBridge.m; sourceTree = "<group>"; };
 		38CB89041D94BBF6000172C0 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		38E773801D989E22003F6218 /* ARToolKit5iOScomplete-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ARToolKit5iOScomplete-Bridging-Header.h"; sourceTree = "<group>"; };
 		4A0619B213D59DF10066826B /* ARAppMovie-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ARAppMovie-Info.plist"; sourceTree = "<group>"; };
@@ -3311,7 +3315,7 @@
 		78BB3F2108E4837000D7CA2D /* videoConfig.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = videoConfig.h; sourceTree = "<group>"; };
 		78BB3F5208E483CB00D7CA2D /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
 		90191A761D88F3E300718D0D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		90191A771D88F3E300718D0D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		90191A771D88F3E300718D0D /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		90F00DEC1D890F2E00C9E04B /* ARApp_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARApp_Prefix.pch; sourceTree = "<group>"; };
 		90F00DEE1D89147400C9E04B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -3657,6 +3661,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				387FF50E1DC97A86002D6834 /* AVFoundation.framework in Frameworks */,
 				4A941D211AE5DCDF000FA802 /* libAR.a in Frameworks */,
 				4A941D281AE5DCE5000FA802 /* libARICP.a in Frameworks */,
 				4AF7B0EF17A123440033FB21 /* libARgsub_es2.a in Frameworks */,
@@ -3668,7 +3673,6 @@
 				4A47F828116E638B00FC577E /* OpenGLES.framework in Frameworks */,
 				4A47F816116E638800FC577E /* Foundation.framework in Frameworks */,
 				4A47F817116E638800FC577E /* UIKit.framework in Frameworks */,
-				4AC2E637118ED63E00CC4F55 /* AVFoundation.framework in Frameworks */,
 				4AC2E639118ED63E00CC4F55 /* CoreMedia.framework in Frameworks */,
 				4AC2E675118ED68C00CC4F55 /* CoreVideo.framework in Frameworks */,
 				4AF6F06613DD27C600F77FB0 /* AudioToolbox.framework in Frameworks */,
@@ -3964,7 +3968,7 @@
 			isa = PBXGroup;
 			children = (
 				90191A761D88F3E300718D0D /* AppDelegate.swift */,
-				90191A771D88F3E300718D0D /* ViewController.swift */,
+				90191A771D88F3E300718D0D /* ARViewController.swift */,
 				4A47F751116E092C00FC577E /* ARView.h */,
 				4A47F752116E092C00FC577E /* ARView.m */,
 			);
@@ -4050,6 +4054,8 @@
 		4A33B6B018ADB7C50028A979 /* ARAppCore */ = {
 			isa = PBXGroup;
 			children = (
+				387EDE8E1DDB52EC001981A5 /* ARPointerBridge.h */,
+				387EDE8F1DDB52EC001981A5 /* ARPointerBridge.m */,
 				4A33B70718ADC8700028A979 /* ARView.h */,
 				4A33B70818ADC8700028A979 /* ARView.m */,
 				4A33B6B118ADB7C50028A979 /* ARMarker.h */,
@@ -7105,6 +7111,7 @@
 				TargetAttributes = {
 					4A50D6FC1164E16D00ED169B = {
 						DevelopmentTeam = GJ48EG8R4K;
+						LastSwiftMigration = 0800;
 					};
 					4AD5C4490A390355003F13D4 = {
 						LastSwiftMigration = 0800;
@@ -7641,9 +7648,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				38E11E241D90D30B005A48AD /* AppDelegate.swift in Sources */,
-				38E11E231D90D305005A48AD /* ViewController.swift in Sources */,
+				38E11E231D90D305005A48AD /* ARViewController.swift in Sources */,
 				4A33B6C718ADB86D0028A979 /* EAGLView.m in Sources */,
 				4A47F753116E092C00FC577E /* ARView.m in Sources */,
+				387EDE911DDB52EC001981A5 /* ARPointerBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -7835,6 +7843,7 @@
 				4AF10200180BFC9900A922DE /* arLabelingSubDWRA3C.c in Sources */,
 				4AF101B0180BFC9100A922DE /* ar3DUtil.c in Sources */,
 				4AF1021C180BFC9900A922DE /* arLabelingSubEWI3CA5551.c in Sources */,
+				387EDE901DDB52EC001981A5 /* ARPointerBridge.m in Sources */,
 				4AF101BA180BFC9100A922DE /* arLabeling.c in Sources */,
 				4AF101C3180BFC9100A922DE /* mAllocInv.c in Sources */,
 				4AF1021A180BFC9900A922DE /* arLabelingSubEWI3CA.c in Sources */,
@@ -8764,10 +8773,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = examples/ARApp/ARApp_Prefix.pch;
 				INFOPLIST_FILE = "examples/ARApp/ARApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fujixl-lab-j13-icloud.com.ARApp";
 				PRODUCT_NAME = ARApp;
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Documents/ARToolKitWithSwift/temprary01/ARToolKit5iOScomplete-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Documents/ARToolKitWithSwift/temprary01 のコピー/ARToolKit5iOScomplete-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -8780,10 +8793,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = examples/ARApp/ARApp_Prefix.pch;
 				INFOPLIST_FILE = "examples/ARApp/ARApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fujixl-lab-j13-icloud.com.ARApp";
 				PRODUCT_NAME = ARApp;
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Documents/ARToolKitWithSwift/temprary01/ARToolKit5iOScomplete-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Documents/ARToolKitWithSwift/temprary01 のコピー/ARToolKit5iOScomplete-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -8797,10 +8814,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = examples/ARApp/ARApp_Prefix.pch;
 				INFOPLIST_FILE = "examples/ARApp/ARApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "fujixl-lab-j13-icloud.com.ARApp";
 				PRODUCT_NAME = ARApp;
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Documents/ARToolKitWithSwift/temprary01/ARToolKit5iOScomplete-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Documents/ARToolKitWithSwift/temprary01 のコピー/ARToolKit5iOScomplete-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

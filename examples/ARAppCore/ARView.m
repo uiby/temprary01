@@ -249,7 +249,7 @@ NSString *const ARViewTouchNotification = @"ARViewTouchNotification";
     [[NSNotificationCenter defaultCenter] postNotificationName:ARViewUpdatedCameraLensNotification object:self];
 }
 
-- (void)setCameraPose:(float *)pose
+- (void) setCameraPose:(float *)pose
 {
     if (pose) {
         int i;

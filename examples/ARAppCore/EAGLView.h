@@ -97,6 +97,9 @@ typedef enum {
 
 - (void) clearBuffers;                     // Subclass should call this at the start of -drawView:.
 - (void) drawView:(id)sender;              // Default implementation does nothing; override in subclass.
+- (void) setCameraPose:(float *)cameraPose;
+- (void) updateWithTimeDelta:(NSTimeInterval)timeDelta;
+
 - (void) swapBuffers;                      // Subclass should call this at the end of -drawView:.
 
 @property (readonly, nonatomic, getter=isAnimating) BOOL animating;

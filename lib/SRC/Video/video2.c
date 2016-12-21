@@ -430,6 +430,33 @@ AR2VideoParamT *ar2VideoOpenAsync(const char *config_in, void (*callback)(void *
     return NULL;
 }
 
+AR2VideoParamT *ar2VideoOpenAsync2(const char *config_in, void (*callback)(void), void *userdata)
+{
+    AR2VideoParamT            *vid;
+    const char                *config;
+    // Some devices won't understand the "-device=" option, so we need to pass
+    // only the portion following that option to them.
+    const char                *configStringFollowingDevice = NULL;
+    
+    arMalloc( vid, AR2VideoParamT, 1 );
+    config = ar2VideoGetConfig(config_in);
+    vid->deviceType = ar2VideoGetDeviceWithConfig(config, &configStringFollowingDevice);
+    
+    if( vid->deviceType == AR_VIDEO_DEVICE_IPHONE ) {
+#ifdef AR_INPUT_IPHONE
+        if (callback) vid->device.iPhone = ar2VideoOpenAsynciPhone(config, callback, userdata);
+        else vid->device.iPhone = NULL;
+        
+        if (vid->device.iPhone != NULL) return vid;
+#else
+        ARLOGe("ar2VideoOpen: Error: device \"iPhone\" not supported on this build/architecture/system.\n");
+#endif
+    }
+    
+    free( vid );
+    return NULL;
+}
+
 int ar2VideoClose( AR2VideoParamT *vid )
 {
     int ret;
