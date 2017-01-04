@@ -13,7 +13,6 @@
 #import "EAGLView.h"
 #import "ARView.h"
 #import "param.h"
-#import "ARPointerBridge.h"
-#import "PrefixHeader.pch"
+//#import "ARPointerBridge.h"
 
 #endif /* Bridging_Header_h */

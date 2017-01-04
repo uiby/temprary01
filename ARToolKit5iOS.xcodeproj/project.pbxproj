@@ -8770,6 +8770,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = GJ48EG8R4K;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = examples/ARApp/ARApp_Prefix.pch;
 				INFOPLIST_FILE = "examples/ARApp/ARApp-Info.plist";
@@ -8778,7 +8779,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "fujixl-lab-j13-icloud.com.ARApp";
 				PRODUCT_NAME = ARApp;
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Documents/ARToolKitWithSwift/temprary01 のコピー/ARToolKit5iOScomplete-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/j13417/Documents/temprary01/ARToolKit5iOScomplete-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -8790,6 +8791,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = GJ48EG8R4K;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = examples/ARApp/ARApp_Prefix.pch;
 				INFOPLIST_FILE = "examples/ARApp/ARApp-Info.plist";
@@ -8798,7 +8800,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "fujixl-lab-j13-icloud.com.ARApp";
 				PRODUCT_NAME = ARApp;
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Documents/ARToolKitWithSwift/temprary01 のコピー/ARToolKit5iOScomplete-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/j13417/Documents/temprary01/ARToolKit5iOScomplete-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -8811,6 +8813,7 @@
 				CODE_SIGN_ENTITLEMENTS = examples/ARApp/dist.plist;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = GJ48EG8R4K;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = examples/ARApp/ARApp_Prefix.pch;
 				INFOPLIST_FILE = "examples/ARApp/ARApp-Info.plist";
@@ -8819,7 +8822,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "fujixl-lab-j13-icloud.com.ARApp";
 				PRODUCT_NAME = ARApp;
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/fujixlab_user1/Documents/ARToolKitWithSwift/temprary01 のコピー/ARToolKit5iOScomplete-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/j13417/Documents/temprary01/ARToolKit5iOScomplete-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -7,9 +7,9 @@
 //
 
 import UIKit
+//import AVFoundation
 import AudioToolbox
 import QuartzCore
-//import "ARView.h"
 //@class ARView
 class ARViewController: UIViewController, UIAlertViewDelegate, CameraVideoTookPictureDelegate, EAGLViewTookSnapshotDelegate{
     let VIEW_SCALEFACTOR: Float = 1.0
@@ -201,10 +201,9 @@ class ARViewController: UIViewController, UIAlertViewDelegate, CameraVideoTookPi
         // Work out if the front camera is being used. If it is, flip the viewing frustum for
         // 3D drawing.
         var flipV: Bool = false
-        var frontCamera: UnsafeMutablePointer<Int32>? = nil
-        let position :Int32 = Int32(AR_VIDEO_PARAM_IOS_CAMERA_POSITION)
-        if (ar2VideoGetParami(gVid, position, frontCamera) >= 0) {
-            if (frontCamera?.pointee == AR_VIDEO_IOS_CAMERA_POSITION_FRONT.rawValue) {
+        var frontCamera: Int32 = 0
+        if (ar2VideoGetParami(gVid, Int32(AR_VIDEO_PARAM_IOS_CAMERA_POSITION), &frontCamera) >= 0) {
+            if (frontCamera == AR_VIDEO_IOS_CAMERA_POSITION_FRONT.rawValue) {
                 flipV = true
             }
         }
@@ -381,7 +380,7 @@ class ARViewController: UIViewController, UIAlertViewDelegate, CameraVideoTookPi
         self.startRunLoop()
     }
     
-    func cameraVideoTookPicture(_ sender: Any!, userData data: UnsafeMutableRawPointer!) {
+    func cameraVideoTookPicture(_ sender: Any, userData data: UnsafeMutableRawPointer) {
         let buffer: UnsafeMutablePointer<AR2VideoBufferT>? = ar2VideoGetImage(gVid)
         if (buffer != nil) {
             self.processFrame(buffer)
@@ -475,12 +474,12 @@ class ARViewController: UIViewController, UIAlertViewDelegate, CameraVideoTookPi
             // Get current time (units = seconds).
             var runLoopTimeNow: TimeInterval
             runLoopTimeNow = CFAbsoluteTimeGetCurrent()
-            glView!.update(withTimeDelta: runLoopTimeNow - runLoopTimePrevious)
+            glView!.update(withTimeDelta: (runLoopTimeNow - runLoopTimePrevious))
             
             // The display has changed.
             //FIXME Current draw framebuffer is invalid.
             glView!.draw(self)
-            
+
             // Save timestamp for next loop.
             runLoopTimePrevious = runLoopTimeNow;
         }
@@ -527,11 +526,7 @@ class ARViewController: UIViewController, UIAlertViewDelegate, CameraVideoTookPi
         self.stop()
         super.viewWillDisappear(animated)
     }
-    
-    deinit {
-        //super.dein
-    }
-    
+        
     //ARToolKit-specific methods.
     func markersHaveWhiteBorders () -> Bool {
         var mode :Int32 = 0
